@@ -14,11 +14,12 @@ import React from "react";
 const projects = [
   {
     id: 1,
-    image:
-      "https://images.pexels.com/photos/7289717/pexels-photo-7289717.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: "/portifolio.png",
     projectName: "E-commerce Store",
     description:
       "been working at Kona Software Lab Limited since August 2021 as a Full Stack Developer. I have also been involved in a number of research projects regarding Artificial Intelligence, Computer Networks and Cyber-security.",
+    code: "https://github.com/HermanAthor/My-portifolio",
+    demo: "herman-portifolio.vercel.app",
   },
   {
     id: 2,
@@ -27,6 +28,8 @@ const projects = [
     projectName: "E-commerce Store",
     description:
       "been working at Kona Software Lab Limited since August 2021 as a Full Stack Developer. I have also been involved in a number of research projects regarding Artificial Intelligence, Computer Networks and Cyber-security.",
+    code: "#",
+    demo: "#",
   },
   {
     id: 3,
@@ -35,6 +38,8 @@ const projects = [
     projectName: "E-commerce Store",
     description:
       "been working at Kona Software Lab Limited since August 2021 as a Full Stack Developer. I have also been involved in a number of research projects regarding Artificial Intelligence, Computer Networks and Cyber-security.",
+    code: "#",
+    demo: "#",
   },
   {
     id: 4,
@@ -43,6 +48,8 @@ const projects = [
     projectName: "E-commerce Store",
     description:
       "been working at Kona Software Lab Limited since August 2021 as a Full Stack Developer. I have also been involved in a number of research projects regarding Artificial Intelligence, Computer Networks and Cyber-security.",
+    code: "#",
+    demo: "#",
   },
 ];
 
@@ -64,7 +71,7 @@ export default function Projects() {
 }
 
 const Project = ({ project }) => {
-  const { image, projectName, description } = project;
+  const { image, projectName, description, code, demo } = project;
   return (
     <Card
       className="mb-4 mt-4 flex flex-col rounded p-4 dark:bg-[#3e3e42]"
@@ -82,8 +89,12 @@ const Project = ({ project }) => {
         <Typography variant="body2">{description}</Typography>
       </CardContent>
       <CardActions>
-        <Button>Demo</Button>
-        <Button>Code</Button>
+        <Button>
+          <a href={demo}>Demo</a>
+        </Button>
+        <Button>
+          <a href={code}>Code</a>
+        </Button>
       </CardActions>
     </Card>
   );

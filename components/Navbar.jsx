@@ -14,10 +14,10 @@ function Navbar() {
     <>
       <nav className="flex justify-between items-center px-4 py-4">
         <Image
-          src="/hermanlogo.svg"
+          src="/hermanlogo2.svg"
           alt="hermanlogo"
-          width={200}
-          height={200}
+          width={100}
+          height={100}
         />
         <div className="md:hidden flex flex-row justify-center items-center gap-3">
           <div>

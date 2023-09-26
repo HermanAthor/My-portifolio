@@ -31,7 +31,9 @@ function ContactMe() {
                 </div>
                 <div>
                   <h6>Email</h6>
-                  <h6>hermanathorg@gmail.com</h6>
+                  <a href="mailto:hermanathorg@gmail.com">
+                    hermanathorg@gmail.com
+                  </a>
                 </div>
               </div>
               <div className="flex flex-row justify-start align-start items-center">
@@ -40,7 +42,7 @@ function ContactMe() {
                 </div>
                 <div>
                   <h6>Phone</h6>
-                  <h6>+4591870973</h6>
+                  <a href="tel:+4591870973">+4591870973</a>
                 </div>
               </div>
             </Box>

@@ -17,9 +17,10 @@ function TechStack({ data }) {
         minWidth="5.7rem"
       >
         <Avatar
+          className=" object-cover"
           src={data.img}
           alt="icon image"
-          sx={{ width: 200, height: 200 }}
+          sx={{ width: { xs: 100, md: 200 }, height: { xs: 100, md: 200 } }}
         />
         <Typography variant="h6">{data.title}</Typography>
       </Stack>
