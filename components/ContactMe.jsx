@@ -1,13 +1,35 @@
 "use client";
 
-import React from "react";
+import emailjs from "@emailjs/browser";
+
+import React, { useRef } from "react";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import { Grid, Box, TextField, Button } from "@mui/material";
 
 function ContactMe() {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_q6cb5pp",
+        "template_4gkm94r",
+        form.current,
+        "na67JSOIendhK0zHT"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
-    <div className="mb-10 p-10 md:p-0">
+    <section id="contact" className="mb-10 p-10 md:p-0">
       <div className="flex justify-center items-center">
         <h1 className="items-center mx-auto text-3xl my-4 mb-4">
           Wanna Know more About Me
@@ -50,7 +72,7 @@ function ContactMe() {
           <Grid item xs={12} md={6}>
             <div className="text-2xl px-3 my-4 pl-7">Send Me a Message</div>
             <div>
-              <form action="submit" className="p-10 md:p-2">
+              <form ref={form} onSubmit={sendEmail} className="p-10 md:p-2">
                 <Grid container spacing={2}>
                   <Grid item xs={12} md={6}>
                     <TextField
@@ -61,6 +83,8 @@ function ContactMe() {
                       defaultValue="Company"
                       focused
                       fullWidth
+                      type="text"
+                      name="user_name"
                     />
                   </Grid>
                   <Grid item xs={12} md={6}>
@@ -71,6 +95,8 @@ function ContactMe() {
                       defaultValue="email@example.com"
                       focused
                       fullWidth
+                      type="email"
+                      name="user_email"
                     />
                   </Grid>
                   <Grid item xs={12} md={12}>
@@ -83,10 +109,14 @@ function ContactMe() {
                       maxRows={10}
                       focused
                       fullWidth
+                      type="text"
+                      name="message"
                     />
                   </Grid>
                   <Grid item xs={12} md={12}>
-                    <Button variant="outlined">Submit</Button>
+                    <Button type="submit" variant="outlined">
+                      Submit
+                    </Button>
                   </Grid>
                 </Grid>
               </form>
@@ -94,7 +124,7 @@ function ContactMe() {
           </Grid>
         </Grid>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -7,7 +7,7 @@ import { Container, Stack } from "@mui/material";
 
 function Skills() {
   return (
-    <div>
+    <section id="skills">
       <div className="flex justify-center items-center mt-0 mb-7">
         <h1 className="text-3xl">Technical Skills</h1>
       </div>
@@ -32,7 +32,7 @@ function Skills() {
           return <TechStack key={data.id} data={data} />;
         })}
       </div> */}
-    </div>
+    </section>
   );
 }
 

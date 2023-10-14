@@ -41,31 +41,56 @@ function Navbar() {
         </div>
 
         <ul className="flex justify-between text-4xl items-center md:gap-5 gap-3 font-serif font-semibold max-sm:hidden">
-          <li className=" hover:underline">About</li>
-          <li className=" hover:underline">Skills</li>
-          <li className=" hover:underline">Projects</li>
-          <li className=" hover:underline">contact</li>
+          <a href="#about">
+            <li className=" hover:underline">About</li>
+          </a>
+          <a href="#skills">
+            <li className=" hover:underline">Skills</li>
+          </a>
+          <a href="#projects">
+            <li className=" hover:underline">Projects</li>
+          </a>
+          <a href="#contact">
+            <li className=" hover:underline">contact</li>
+          </a>
         </ul>
       </nav>
       {isOpen && (
         <div className="relative">
           <nav className="flex justify-between items-center  md:hidden absolute top-0 left-0 z-50">
             <ul className="flex justify-between flex-col items-center md:gap-5 gap-3 font-serif font-semibold bg-gray-900 py-5 px-8 rounded-3xl relative text-3xl">
-              <li
-                onClick={() => setIsOpen(false)}
-                className=" hover:underline mt-7"
-              >
-                About
-              </li>
-              <li onClick={() => setIsOpen(false)} className=" hover:underline">
-                Skills
-              </li>
-              <li onClick={() => setIsOpen(false)} className=" hover:underline">
-                Projects
-              </li>
-              <li onClick={() => setIsOpen(false)} className=" hover:underline">
-                contact
-              </li>
+              <a href="#about">
+                <li
+                  onClick={() => setIsOpen(false)}
+                  className=" hover:underline mt-7"
+                >
+                  About
+                </li>
+              </a>
+              <a href="#skills">
+                <li
+                  onClick={() => setIsOpen(false)}
+                  className=" hover:underline"
+                >
+                  Skills
+                </li>
+              </a>
+              <a href="#projects">
+                <li
+                  onClick={() => setIsOpen(false)}
+                  className=" hover:underline"
+                >
+                  Projects
+                </li>
+              </a>
+              <a href="#contact">
+                <li
+                  onClick={() => setIsOpen(false)}
+                  className=" hover:underline"
+                >
+                  contact
+                </li>
+              </a>
               <div className="absolute top-0 right-0 m-2">
                 <IconButton
                   onClick={() => setIsOpen(false)}

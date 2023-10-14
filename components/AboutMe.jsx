@@ -6,7 +6,7 @@ import React, { useState } from "react";
 function AboutMe() {
   const [moreInfo, setMoreInfo] = useState(false);
   return (
-    <div className="flex items-center flex-col">
+    <section id="about" className="flex items-center flex-col">
       <div className="text-2xl">A little About Me</div>
       <div>
         <p className="md:hidden block px-4">
@@ -104,7 +104,7 @@ function AboutMe() {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

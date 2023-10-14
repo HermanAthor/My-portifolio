@@ -55,7 +55,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="">
+    <section id="projects" className="">
       <Grid className="flex justify-center items-center">
         <Typography variant="h3">Projects I have built</Typography>
       </Grid>
@@ -66,7 +66,7 @@ export default function Projects() {
           })}
         </div>
       </Container>
-    </div>
+    </section>
   );
 }
 

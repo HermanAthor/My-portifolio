@@ -11,7 +11,8 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function Hero() {
   return (
-    <div
+    <section
+      id="hero"
       className={` relative w-full h-full bg-[url('/herobg.jpg')] bg-no-repeat bg-cover mb-5 pb-3 overflow-clip`}
     >
       <Navbar />
@@ -72,7 +73,7 @@ function Hero() {
           src={"/hermandp.png"}
         />
       </div>
-    </div>
+    </section>
   );
 }
 
