@@ -12,14 +12,14 @@ function Navbar() {
   };
   return (
     <>
-      <nav className="flex justify-between items-center px-4 py-4">
+      <nav className="flex justify-between items-center w-full bg-gradient-to-r from-[#435996] to-[#ceeeeb] fixed top-0 px-4 py-4 ">
         <Image
           src="/hermanlogo2.svg"
           alt="hermanlogo"
           width={100}
           height={100}
         />
-        <div className="md:hidden flex flex-row justify-center items-center gap-3">
+        {/* <div className="md:hidden flex flex-row justify-center items-center gap-3">
           <div>
             {isOpen ? (
               <Button onClick={() => handleClose()} variant="outlined">
@@ -38,7 +38,7 @@ function Navbar() {
             alt="herman"
             sx={{ width: 100, height: 100 }}
           />
-        </div>
+        </div> */}
 
         <ul className="flex justify-between text-4xl items-center md:gap-5 gap-3 font-serif font-semibold max-sm:hidden">
           <a href="#about">

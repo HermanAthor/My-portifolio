@@ -31,7 +31,7 @@ function ContactMe() {
   return (
     <section id="contact" className="mb-10 p-10 md:p-0">
       <div className="flex justify-center items-center">
-        <h1 className="items-center mx-auto text-3xl my-4 mb-4">
+        <h1 className="text-5xl md:text-7xl font-sans font-extrabold text-black">
           Wanna Know more About Me
         </h1>
       </div>
