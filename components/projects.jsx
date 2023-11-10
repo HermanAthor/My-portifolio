@@ -84,7 +84,7 @@ const Project = ({ project }) => {
   const { image, projectName, description, code, demo, tech } = project;
   return (
     <Card
-      className="mb-4 mt-4 flex flex-col rounded-2xl p-4 dark:bg-[#3e3e42] bg-slate-500 hover:border-blue-300 hover:bg-slate-300 "
+      className="mb-4 mt-4 flex flex-col rounded-2xl p-4 dark:bg-[#3e3e42] bg-slate-500 hover:border-blue-300 "
       variant="outlined"
     >
       <CardMedia
@@ -97,7 +97,7 @@ const Project = ({ project }) => {
       <CardContent>
         <Typography variant="h4">{projectName}</Typography>
         <Typography variant="body2">{description}</Typography>
-        <Box className="mt-3">
+        <Box className="mt-3 flex flex-wrap w-full">
           {tech?.map((tool) => {
             return (
               <span
@@ -111,7 +111,7 @@ const Project = ({ project }) => {
         </Box>
       </CardContent>
       <CardActions>
-        <Button>
+        <Button className="text-white border border-black">
           <a href={demo}>Demo</a>
         </Button>
         <Button>

@@ -17,13 +17,6 @@ function AboutMe() {
             alt="herman dp"
             className="w-full h-full object-cover"
           />
-          {/* <button
-            onClick={() => setMoreInfo((prev) => !prev)}
-            type="button"
-            className="text-white bg-gradient-to-r sm:text-sm text-xl absolute -bottom-4 left-20 md:left-40 w-1/2 from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg  px-10 py-2 text-center mr-2 mb-2 "
-          >
-            {moreInfo ? "Know More" : "Briefly"}
-          </button> */}
         </div>
         <div className="flex justify-center items-center">
           {!moreInfo ? (

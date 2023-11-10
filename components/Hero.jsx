@@ -43,7 +43,7 @@ function Hero() {
               download={"Herman_CV"}
               className="bg-white text-black font-semibold px-10 py-4 border-none text-lg text-center rounded-full  mt-6 hover:animate-pulse animate__animated animate__bounce"
             >
-              Reseme
+              Resume
             </a>
             <a
               href="#contact"
